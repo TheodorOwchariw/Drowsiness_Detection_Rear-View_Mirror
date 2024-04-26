@@ -1,0 +1,214 @@
+package Model.APPS.CCU4_SLICE_CONFIG.v4_0_16;
+
+// Import statements
+import ifx.davex.app.manifest.*
+
+abstract class CCU4_SLICE_CONFIG_GUI extends AppManifest {
+	/* Begin : UI variable section */
+	 public GTab gtab_General_Settings;
+	 public GTab gtab_compare_mode_settings;
+	 public GTab gtab_capture_mode_settings;
+	 public GTab gtab_value_update_settings;
+	 public GTab gtab_Timer_Event_Settings;
+	 public GInteger ginteger_timer_initial_value;
+	 public GInteger ginteger_timer_period_value;
+	 public GInteger ginteger_timer_compare_value;
+	 public GInteger ginteger_dither_compare_value;
+	 public GInteger ginteger_max_count_value;
+	 public GCombo gcombo_operation_mode;
+	 public GCombo gcombo_prescaler_mode;
+	 public GCombo gcombo_prescaler_initial;
+	 public GCombo gcombo_floating_prescaler_maximum;
+	 public GCombo gcombo_compare_counting_mode;
+	 public GCombo gcombo_output_passive_level;
+	 public GCombo gcombo_dither_mode;
+	 public GCombo gcombo_timer_clear_control;
+	 public GCombo gcombo_shadow_transfer_mode;
+	 public GCombo gcombo_start_function;
+	 public GCombo gcombo_start_function_mode;
+	 public GCombo gcombo_stop_function;
+	 public GCombo gcombo_stop_function_mode;
+	 public GCombo gcombo_count_function;
+	 public GCombo gcombo_direction_function;
+	 public GCombo gcombo_capture0_function;
+	 public GCombo gcombo_capture1_function;
+	 public GCombo gcombo_gate_function;
+	 public GCombo gcombo_load_function;
+	 public GCombo gcombo_trap_function;
+	 public GCombo gcombo_exit_trap_state_mode;
+	 public GCombo gcombo_modulation_function;
+	 public GCombo gcombo_modulation_function_mode;
+	 public GCombo gcombo_override_trigger_function;
+	 public GCombo gcombo_override_value_function;
+	 public GFloat gfloat_tick_resolution;
+	 public GCheck gcheck_init_start;
+	 public GCheck gcheck_enable_multichannel_control;
+	 public GCheck gcheck_single_shot_mode;
+	 public GCheck gcheck_enable_same_capture_event;
+	 public GCheck gcheck_enable_extended_capture_mode;
+	 public GCheck gcheck_ignore_full_flag_rules;
+	 public GCheck gcheck_enable_shadow_transfer_on_clear;
+	 public GCheck gcheck_enable_mcss_input;
+	 public GCheck gcheck_enable_cascade_shadow_transfer;
+	 public GCheck gcheck_enable_period_immediate_update;
+	 public GCheck gcheck_enable_compare_immediate_update;
+	 public GCheck gcheck_enable_psl_immediate_update;
+	 public GCheck gcheck_enable_dither_immediate_update;
+	 public GCheck gcheck_enable_prescaler_immediate_update;
+	 public GCheck gcheck_automatic_shadow_transfer_request_on_period_write;
+	 public GCheck gcheck_automatic_shadow_transfer_request_on_compare_write;
+	 public GCheck gcheck_automatic_shadow_transfer_request_on_psl_write;
+	 public GCheck gcheck_automatic_shadow_transfer_request_on_dither_write;
+	 public GCheck gcheck_automatic_shadow_transfer_request_on_prescaler_write;
+	 public GCheck gcheck_enable_trap_during_initialization;
+	 public GCheck gcheck_enable_modulation_sync_with_pwm;
+	 public GCheck gcheck_enable_period_match_event;
+	 public GCheck gcheck_enable_one_match_event;
+	 public GCheck gcheck_enable_compare_up_event;
+	 public GCheck gcheck_enable_compare_down_event;
+	 public GCheck gcheck_enable_external_event0;
+	 public GCheck gcheck_enable_external_event1;
+	 public GCheck gcheck_enable_external_event2;
+	 public GLabel glabel_Operation_mode0;
+	 public GLabel glabel_Prescaler_mode0;
+	 public GLabel glabel_Prescaler_initial_value0;
+	 public GLabel glabel_slice_freq;
+	 public GLabel glabel_counting_mode;
+	 public GLabel glabel_timer_period_value;
+	 public GLabel glabel_timer_compare_value;
+	 public GLabel glabel_Timer_clear_control0;
+	 public GLabel glabel_shadow_transfer_mode;
+	 public GLabel glabel_start_function_mode;
+	 public GLabel glabel_stop_function_mode;
+	 public GLabel glabel_count_function;
+	 public GLabel glabel_direction_function;
+	 public GLabel glabel_capture0_function;
+	 public GLabel glabel_capture1_function;
+	 public GLabel glabel_gate_function;
+	 public GLabel glabel_load_function;
+	 public GLabel glabel_trap_function;
+	 public GLabel glabel_70;
+	 public GLabel glabel_modulation_function;
+	 public GLabel glabel_modulation_function_mode;
+	 public GLabel glabel_override_trigger_function;
+	 public GLabel glabel_override_value_function;
+	 public GGroup ggroup_17;
+	 public GGroup ggroup_18;
+	 public GGroup ggroup_register_value_update_mode;
+	 public GGroup ggroup_shadow_transfer_request;
+	 public GGroup ggroup_function_configuration;
+	 public GGroup ggroup_timer_events;
+	 public GGroup ggroup_input_events;
+	 public GMessage gmessage_function_settings;
+	 public GIndexCombo gindexcombo_event_selection;
+	 public GIndexGroup gindexgroup_input_event_configuration;
+	 public RArray<Gindexgroup_input_event_configuration> rArraygindexgroup_input_event_configuration = RArray(3);
+
+
+	 public CCU4_SLICE_CONFIG_GUI(DaveEnv daveEnv){
+
+	 gtab_General_Settings = GTab(widgetName:"gtab_General_Settings", text:"General Settings", enabled:true, visible:true)
+	 gtab_compare_mode_settings = GTab(widgetName:"gtab_compare_mode_settings", text:"Compare Mode Settings", enabled:true, visible:true)
+	 gtab_capture_mode_settings = GTab(widgetName:"gtab_capture_mode_settings", text:"Capture Mode Settings", enabled:true, visible:true)
+	 gtab_value_update_settings = GTab(widgetName:"gtab_value_update_settings", text:"Value Update Settings", enabled:true, visible:true)
+	 gtab_Timer_Event_Settings = GTab(widgetName:"gtab_Timer_Event_Settings", text:"Event Settings", enabled:true, visible:true)
+	 ginteger_timer_initial_value = GInteger(widgetName:"ginteger_timer_initial_value", value:0, minValue:0, maxValue:65535, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_timer_period_value = GInteger(widgetName:"ginteger_timer_period_value", value:65535, minValue:0, maxValue:65535, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_timer_compare_value = GInteger(widgetName:"ginteger_timer_compare_value", value:32768, minValue:0, maxValue:65535, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_dither_compare_value = GInteger(widgetName:"ginteger_dither_compare_value", value:0, minValue:0, maxValue:15, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_max_count_value = GInteger(widgetName:"ginteger_max_count_value", value:65535, minValue:0, maxValue:65535, enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_operation_mode = GCombo(widgetName:"gcombo_operation_mode", options:["Compare Mode","Capture Mode"], value:"Compare Mode", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_prescaler_mode = GCombo(widgetName:"gcombo_prescaler_mode", options:["Normal Mode","Floating Mode"], value:"Normal Mode", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_prescaler_initial = GCombo(widgetName:"gcombo_prescaler_initial", options:["1","2","4","8","16","32","64","128","256","512","1024","2048","4096","8192","16384","32768"], value:"1", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_floating_prescaler_maximum = GCombo(widgetName:"gcombo_floating_prescaler_maximum", options:["1","2","4","8","16","32","64","128","256","512","1024","2048","4096","8192","16384","32768"], value:"32768", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_compare_counting_mode = GCombo(widgetName:"gcombo_compare_counting_mode", options:["Edge Aligned","Center Aligned"], value:"Edge Aligned", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_output_passive_level = GCombo(widgetName:"gcombo_output_passive_level", options:["Low","High"], value:"Low", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_dither_mode = GCombo(widgetName:"gcombo_dither_mode", options:["Dither is disabled","Period is increased by 1 cycle","Compare match is delayed by 1 cycle","Period is increased by 1 cycle and compare match is delayed by 1 cycle"], value:"Dither is disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_timer_clear_control = GCombo(widgetName:"gcombo_timer_clear_control", options:["Never cleared","Cleared on capture into reg 2 and 3 (trigger 1)","Cleared on capture into reg 0 and 1 (trigger 0)","Always in a capture event"], value:"Never cleared", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_shadow_transfer_mode = GCombo(widgetName:"gcombo_shadow_transfer_mode", options:["In Period Match and One Match","Only in Period Match","Only in One Match"], value:"In Period Match and One Match", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_start_function = GCombo(widgetName:"gcombo_start_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_start_function_mode = GCombo(widgetName:"gcombo_start_function_mode", options:["Start timer","Clear and Start timer"], value:"Start timer", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_stop_function = GCombo(widgetName:"gcombo_stop_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_stop_function_mode = GCombo(widgetName:"gcombo_stop_function_mode", options:["Stop timer","Clear timer","Clear and Stop timer"], value:"Stop timer", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_count_function = GCombo(widgetName:"gcombo_count_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_direction_function = GCombo(widgetName:"gcombo_direction_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_capture0_function = GCombo(widgetName:"gcombo_capture0_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_capture1_function = GCombo(widgetName:"gcombo_capture1_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_gate_function = GCombo(widgetName:"gcombo_gate_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_load_function = GCombo(widgetName:"gcombo_load_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_trap_function = GCombo(widgetName:"gcombo_trap_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_exit_trap_state_mode = GCombo(widgetName:"gcombo_exit_trap_state_mode", options:["Automatic","Automatic synchronous with PWM","Software","Software synchronous with PWM "], value:"Automatic", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_modulation_function = GCombo(widgetName:"gcombo_modulation_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_modulation_function_mode = GCombo(widgetName:"gcombo_modulation_function_mode", options:["Clear ST and OUT signals","Clear only the OUT signal"], value:"Clear ST and OUT signals", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_override_trigger_function = GCombo(widgetName:"gcombo_override_trigger_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_override_value_function = GCombo(widgetName:"gcombo_override_value_function", options:["Disabled","Triggered by Event 0","Triggered by Event 1","Triggered by Event 2"], value:"Disabled", enabled:true, visible:true, isMandatoryValue:false)
+	 gfloat_tick_resolution = GFloat(widgetName:"gfloat_tick_resolution", value:0, minValue:Double.NEGATIVE_INFINITY, maxValue:Double.POSITIVE_INFINITY, enabled:false, visible:true, isMandatoryValue:false)
+	 gcheck_init_start = GCheck(widgetName:"gcheck_init_start", value:false, enabled:true, visible:true)
+	 gcheck_enable_multichannel_control = GCheck(widgetName:"gcheck_enable_multichannel_control", value:false, enabled:true, visible:true)
+	 gcheck_single_shot_mode = GCheck(widgetName:"gcheck_single_shot_mode", value:false, enabled:true, visible:true)
+	 gcheck_enable_same_capture_event = GCheck(widgetName:"gcheck_enable_same_capture_event", value:false, enabled:true, visible:true)
+	 gcheck_enable_extended_capture_mode = GCheck(widgetName:"gcheck_enable_extended_capture_mode", value:false, enabled:true, visible:true)
+	 gcheck_ignore_full_flag_rules = GCheck(widgetName:"gcheck_ignore_full_flag_rules", value:false, enabled:true, visible:true)
+	 gcheck_enable_shadow_transfer_on_clear = GCheck(widgetName:"gcheck_enable_shadow_transfer_on_clear", value:false, enabled:true, visible:true)
+	 gcheck_enable_mcss_input = GCheck(widgetName:"gcheck_enable_mcss_input", value:false, enabled:true, visible:true)
+	 gcheck_enable_cascade_shadow_transfer = GCheck(widgetName:"gcheck_enable_cascade_shadow_transfer", value:false, enabled:true, visible:true)
+	 gcheck_enable_period_immediate_update = GCheck(widgetName:"gcheck_enable_period_immediate_update", value:false, enabled:true, visible:true)
+	 gcheck_enable_compare_immediate_update = GCheck(widgetName:"gcheck_enable_compare_immediate_update", value:false, enabled:true, visible:true)
+	 gcheck_enable_psl_immediate_update = GCheck(widgetName:"gcheck_enable_psl_immediate_update", value:false, enabled:true, visible:true)
+	 gcheck_enable_dither_immediate_update = GCheck(widgetName:"gcheck_enable_dither_immediate_update", value:false, enabled:true, visible:true)
+	 gcheck_enable_prescaler_immediate_update = GCheck(widgetName:"gcheck_enable_prescaler_immediate_update", value:false, enabled:true, visible:true)
+	 gcheck_automatic_shadow_transfer_request_on_period_write = GCheck(widgetName:"gcheck_automatic_shadow_transfer_request_on_period_write", value:false, enabled:true, visible:true)
+	 gcheck_automatic_shadow_transfer_request_on_compare_write = GCheck(widgetName:"gcheck_automatic_shadow_transfer_request_on_compare_write", value:false, enabled:true, visible:true)
+	 gcheck_automatic_shadow_transfer_request_on_psl_write = GCheck(widgetName:"gcheck_automatic_shadow_transfer_request_on_psl_write", value:false, enabled:true, visible:true)
+	 gcheck_automatic_shadow_transfer_request_on_dither_write = GCheck(widgetName:"gcheck_automatic_shadow_transfer_request_on_dither_write", value:false, enabled:true, visible:true)
+	 gcheck_automatic_shadow_transfer_request_on_prescaler_write = GCheck(widgetName:"gcheck_automatic_shadow_transfer_request_on_prescaler_write", value:false, enabled:true, visible:true)
+	 gcheck_enable_trap_during_initialization = GCheck(widgetName:"gcheck_enable_trap_during_initialization", value:false, enabled:true, visible:true)
+	 gcheck_enable_modulation_sync_with_pwm = GCheck(widgetName:"gcheck_enable_modulation_sync_with_pwm", value:false, enabled:true, visible:true)
+	 gcheck_enable_period_match_event = GCheck(widgetName:"gcheck_enable_period_match_event", value:false, enabled:true, visible:true)
+	 gcheck_enable_one_match_event = GCheck(widgetName:"gcheck_enable_one_match_event", value:false, enabled:true, visible:true)
+	 gcheck_enable_compare_up_event = GCheck(widgetName:"gcheck_enable_compare_up_event", value:false, enabled:true, visible:true)
+	 gcheck_enable_compare_down_event = GCheck(widgetName:"gcheck_enable_compare_down_event", value:false, enabled:true, visible:true)
+	 gcheck_enable_external_event0 = GCheck(widgetName:"gcheck_enable_external_event0", value:false, enabled:true, visible:true)
+	 gcheck_enable_external_event1 = GCheck(widgetName:"gcheck_enable_external_event1", value:false, enabled:true, visible:true)
+	 gcheck_enable_external_event2 = GCheck(widgetName:"gcheck_enable_external_event2", value:false, enabled:true, visible:true)
+	 glabel_Operation_mode0 = GLabel(widgetName:"glabel_Operation_mode0", text:"Operation mode: ", enabled:true, visible:true)
+	 glabel_Prescaler_mode0 = GLabel(widgetName:"glabel_Prescaler_mode0", text:"Prescaler mode: ", enabled:true, visible:true)
+	 glabel_Prescaler_initial_value0 = GLabel(widgetName:"glabel_Prescaler_initial_value0", text:"Prescaler initial value:", enabled:true, visible:true)
+	 glabel_slice_freq = GLabel(widgetName:"glabel_slice_freq", text:"Tick resolution [ns]:", enabled:true, visible:true)
+	 glabel_counting_mode = GLabel(widgetName:"glabel_counting_mode", text:"Counting mode:                             ", enabled:true, visible:true)
+	 glabel_timer_period_value = GLabel(widgetName:"glabel_timer_period_value", text:"Timer period value:", enabled:true, visible:true)
+	 glabel_timer_compare_value = GLabel(widgetName:"glabel_timer_compare_value", text:"Timer compare value:", enabled:true, visible:true)
+	 glabel_Timer_clear_control0 = GLabel(widgetName:"glabel_Timer_clear_control0", text:"Timer clear control:                        ", enabled:true, visible:true)
+	 glabel_shadow_transfer_mode = GLabel(widgetName:"glabel_shadow_transfer_mode", text:"Shadow transfer mode:", enabled:true, visible:true)
+	 glabel_start_function_mode = GLabel(widgetName:"glabel_start_function_mode", text:"Start function mode:", enabled:true, visible:true)
+	 glabel_stop_function_mode = GLabel(widgetName:"glabel_stop_function_mode", text:"Stop function mode:", enabled:true, visible:true)
+	 glabel_count_function = GLabel(widgetName:"glabel_count_function", text:"Count function:", enabled:true, visible:true)
+	 glabel_direction_function = GLabel(widgetName:"glabel_direction_function", text:"Count direction control function:", enabled:true, visible:true)
+	 glabel_capture0_function = GLabel(widgetName:"glabel_capture0_function", text:"Capture 0 function:", enabled:true, visible:true)
+	 glabel_capture1_function = GLabel(widgetName:"glabel_capture1_function", text:"Capture 1 function:", enabled:true, visible:true)
+	 glabel_gate_function = GLabel(widgetName:"glabel_gate_function", text:"Gate function:", enabled:true, visible:true)
+	 glabel_load_function = GLabel(widgetName:"glabel_load_function", text:"Load function:", enabled:true, visible:true)
+	 glabel_trap_function = GLabel(widgetName:"glabel_trap_function", text:"Trap function:", enabled:true, visible:true)
+	 glabel_70 = GLabel(widgetName:"glabel_70", text:"Exit TRAP state mode:", enabled:true, visible:true)
+	 glabel_modulation_function = GLabel(widgetName:"glabel_modulation_function", text:"Modulation function:", enabled:true, visible:true)
+	 glabel_modulation_function_mode = GLabel(widgetName:"glabel_modulation_function_mode", text:"Modulation function mode:", enabled:true, visible:true)
+	 glabel_override_trigger_function = GLabel(widgetName:"glabel_override_trigger_function", text:"Override trigger function:", enabled:true, visible:true)
+	 glabel_override_value_function = GLabel(widgetName:"glabel_override_value_function", text:"Override value function:", enabled:true, visible:true)
+	 ggroup_17 = GGroup(widgetName:"ggroup_17", text:"Compare Mode", enabled:true, visible:true)
+	 ggroup_18 = GGroup(widgetName:"ggroup_18", text:"Capture Mode", enabled:true, visible:true)
+	 ggroup_register_value_update_mode = GGroup(widgetName:"ggroup_register_value_update_mode", text:"Register Value Update Mode", enabled:true, visible:true)
+	 ggroup_shadow_transfer_request = GGroup(widgetName:"ggroup_shadow_transfer_request", text:"Shadow Transfer Request", enabled:true, visible:true)
+	 ggroup_function_configuration = GGroup(widgetName:"ggroup_function_configuration", text:"Function Configuration", enabled:true, visible:true)
+	 ggroup_timer_events = GGroup(widgetName:"ggroup_timer_events", text:"Timer Events", enabled:true, visible:true)
+	 ggroup_input_events = GGroup(widgetName:"ggroup_input_events", text:"Input Events", enabled:true, visible:true)
+	 gmessage_function_settings = GMessage(widgetName:"gmessage_function_settings", text:"New Message", isError:true, visible:true)
+	 gindexcombo_event_selection = GIndexCombo(widgetName:"gindexcombo_event_selection", options:["Event 0","Event 1","Event 2"], value:"Event 0")
+	 gindexgroup_input_event_configuration = GIndexGroup(widgetName:"gindexgroup_input_event_configuration", text:"Input Event Configuration", enabled:true, visible:true, gIndexCombo:gindexcombo_event_selection, rArray:rArraygindexgroup_input_event_configuration)
+	 for(int i=0; i<3; i++){
+		rArraygindexgroup_input_event_configuration[i] = new Gindexgroup_input_event_configuration(daveEnv, "gindexgroup_input_event_configuration", i)
+	 }
+
+
+	 }
+	/* End : UI variable section */
+}

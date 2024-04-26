@@ -1,0 +1,4 @@
+-- Running extractDriversRawData.m will run drowsiness Detection testing
+-- Infineon Position2Go board not necessary for testing
+-- Loading testing samples in MATLAB will allow testing purposes without Infineon Position2Go Board
+-- Note that these files are for testing only and will produce different results than final implementation

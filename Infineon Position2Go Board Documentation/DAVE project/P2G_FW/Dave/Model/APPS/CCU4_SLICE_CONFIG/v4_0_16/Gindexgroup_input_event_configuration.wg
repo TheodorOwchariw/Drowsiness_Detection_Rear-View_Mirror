@@ -1,0 +1,15 @@
+package Model.APPS.CCU4_SLICE_CONFIG.v4_0_16;
+
+import ifx.davex.app.manifest.*;
+
+class Gindexgroup_input_event_configuration{
+	 public GCombo gcombo_event_edge_selection;
+	 public GCombo gcombo_event_level_selection;
+	 public GCombo gcombo_event_lpf_configuration;
+
+	public Gindexgroup_input_event_configuration (DaveEnv daveEnv, String widgetName,int index){
+	 gcombo_event_edge_selection = new GCombo(widgetName:"gcombo_event_edge_selection", options:["No action","Signal active on rising edge","Signal active on falling edge","Signal active on both edges"], value:"No action", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 gcombo_event_level_selection = new GCombo(widgetName:"gcombo_event_level_selection", options:["Active on high level","Active on low level"], value:"Active on high level", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 gcombo_event_lpf_configuration = new GCombo(widgetName:"gcombo_event_lpf_configuration", options:["LPF is disabled","3 clock cycles of fCCU4","5 clock cycles of fCCU4","7 clock cycles of fCCU4"], value:"LPF is disabled", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	}
+}

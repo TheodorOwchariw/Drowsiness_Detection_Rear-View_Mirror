@@ -1,0 +1,507 @@
+<p1:Tab xmlns="http://www.eclipse.org/xwt/presentation" xmlns:x="http://www.eclipse.org/xwt"
+	xmlns:p1="clr-namespace:com.ifx.davex.ui.controls.app" x:Class="e" layout="{x:Null}">
+    <p1:TabFolder bounds="5, 5, 696, 796">	
+		<p1:GTab text="General Settings" visible="true" enabled="true"
+			manifestObj="true" widgetName="gtab_General_Settings">
+			<p1:GTab.control>
+				<p1:Tab widgetName="composite_18">
+					<p1:Tab.layout>
+						<GridLayout numColumns="4"/>
+					</p1:Tab.layout>
+					<p1:GCheck description="If enabled the timer will be started at the end of the CCU4 slice initialization."
+						manifestObj="true" text="Start during initialization" toolTipText="If enabled the timer will be started at the end of the CCU4 slice initialization"
+						widgetName="gcheck_init_start" />
+					<Label/>
+					<Label/>
+					<Label/>
+					<p1:GLabel text="Operation mode: " visible="true"
+						manifestObj="true" widgetName="glabel_Operation_mode0" />
+					<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE"
+						manifestObj="true" widgetName="gcombo_operation_mode" options="Compare Mode&#13;&#10;Capture Mode"
+						value="Compare Mode" description="Choose between Compare and Capture Mode for the Timer Slice"
+						toolTipText="Select operation mode">
+						<p1:GCombo.layoutData>
+							<GridData widthHint="110"/>
+						</p1:GCombo.layoutData>
+					</p1:GCombo>
+					<Label/>
+					<Label/>
+					<p1:GLabel text="Timer initial value" visible="true" widgetName="glabel_timer_initial_value"/>
+					<p1:GInteger x:Style="NONE" minValue="0" maxValue="65535" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="ginteger_timer_initial_value" value="0">
+						<p1:GInteger.layoutData>
+							<GridData widthHint="111"/>
+						</p1:GInteger.layoutData>
+					</p1:GInteger>
+					<Label/>
+					<Label/>
+					<p1:GLabel text="Prescaler mode: " visible="true"
+						manifestObj="true" widgetName="glabel_Prescaler_mode0" />
+					<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE"
+						manifestObj="true" widgetName="gcombo_prescaler_mode" options="Normal Mode&#13;&#10;Floating Mode"
+						value="Normal Mode" toolTipText="Select between normal prescaler and floating prescaler modes."
+						description="Selection between floating and normal prescaler.">
+						<p1:GCombo.layoutData>
+							<GridData widthHint="110"/>
+						</p1:GCombo.layoutData>
+					</p1:GCombo>
+					<Label/>
+					<Label/>
+					<p1:GLabel text="Prescaler initial value:" visible="true"
+						manifestObj="true" widgetName="glabel_Prescaler_initial_value0" toolTipText="" description="" />
+					<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_prescaler_initial" options="1&#13;&#10;2&#13;&#10;4&#13;&#10;8&#13;&#10;16&#13;&#10;32&#13;&#10;64&#13;&#10;128&#13;&#10;256&#13;&#10;512&#13;&#10;1024&#13;&#10;2048&#13;&#10;4096&#13;&#10;8192&#13;&#10;16384&#13;&#10;32768" value="1" toolTipText="Prescaler value used to divide the clock." description="Prescaler value used to divide the clock.">
+						<p1:GCombo.layoutData>
+							<GridData widthHint="110"/>
+						</p1:GCombo.layoutData>
+					</p1:GCombo>
+					<p1:GLabel text="Tick resolution [ns]:" visible="true" manifestObj="true" widgetName="glabel_slice_freq" toolTipText="Actual slice frequency after division using prescaler." description="Actual slice frequency after division using prescaler."/>
+					<p1:GFloat x:Style="BORDER" minValue="NEGATIVE_INFINITY" maxValue="POSITIVE_INFINITY" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="*,6" manifestObj="true" widgetName="gfloat_tick_resolution" enabled="false" value="0" toolTipText="The actual slice frequency of the CCU4 slice." description="The actual slice frequency of the CCU4 slice.">
+						<p1:GFloat.layoutData>
+							<GridData widthHint="60"/>
+						</p1:GFloat.layoutData>
+					</p1:GFloat>
+					<p1:GLabel text="Floating  prescaler maximum value:" visible="true" widgetName="glabel_81"/>
+					<p1:GCombo description="Sets the maximum value of the prescaler." mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="1&#13;&#10;2&#13;&#10;4&#13;&#10;8&#13;&#10;16&#13;&#10;32&#13;&#10;64&#13;&#10;128&#13;&#10;256&#13;&#10;512&#13;&#10;1024&#13;&#10;2048&#13;&#10;4096&#13;&#10;8192&#13;&#10;16384&#13;&#10;32768" toolTipText="Sets the maximum value of the prescaler" value="32768" widgetName="gcombo_floating_prescaler_maximum">
+						<p1:GCombo.layoutData>
+							<GridData widthHint="110"/>
+						</p1:GCombo.layoutData>
+					</p1:GCombo>
+					<Label/>
+					<Label/>
+					<p1:GCheck description="Enabling the multi-channel mode allows the control of multiple timer slices synchronously" manifestObj="true"
+						text="Enable multi-channel control" toolTipText="Enabling the multi-channel mode allows the control of multiple timer slices synchronously"
+						widgetName="gcheck_enable_multichannel_control" />
+					<Label/>
+					<Label/>
+					<Label/>
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+        <p1:GTab text="Compare Mode Settings" visible="true" enabled="true" manifestObj="true" widgetName="gtab_compare_mode_settings">
+            <p1:GTab.control>
+                <p1:Tab widgetName="composite_1">
+                    <p1:Tab.layout>
+                        <GridLayout/>
+                    </p1:Tab.layout>  
+                    <p1:GGroup text="Compare Mode" manifestObj="true" widgetName="ggroup_17">
+                        <p1:GGroup.layout>
+                            <GridLayout numColumns="5"/>
+                        </p1:GGroup.layout>
+                        <p1:GGroup.layoutData>
+                            <GridData horizontalSpan="4" grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+                        </p1:GGroup.layoutData>
+                        <p1:GLabel manifestObj="true"
+                        text="Counting mode:                             " widgetName="glabel_counting_mode" />
+                        <p1:GCombo description="Selects between Edge and Center aligned modes"
+                        mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE"
+                        manifestObj="true" options="Edge Aligned&#13;&#10;Center Aligned"
+                        toolTipText="Select the counting mode of timer operation." value="Edge Aligned"
+                        widgetName="gcombo_compare_counting_mode">
+                            <p1:GCombo.layoutData>
+                                <GridData widthHint="128"/>
+                            </p1:GCombo.layoutData>
+                        </p1:GCombo>
+                        <Label/>
+                        <Label/>
+                        <Label/>
+                        <p1:GCheck description="If enabled the timer will be stopped after reaching the period value (in edge aligned mode) or after counting down to 0 (in center aligned mode)."
+                        manifestObj="true" text="Single-shot mode" toolTipText="If enabled the timer will be stopped after reaching the period value (in edge aligned mode) or after counting down to 0 (in center aligned mode)"
+                        widgetName="gcheck_single_shot_mode" />
+                        <Label/>
+                        <Label/>
+                        <Label/>
+                        <Label/>
+                        <p1:GLabel text="Timer period value:" visible="true"
+                        manifestObj="true" widgetName="glabel_timer_period_value" />
+                        <p1:GInteger x:Style="NONE" minValue="0" maxValue="65535"
+                        mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE"
+                        format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC"
+                        manifestObj="true" widgetName="ginteger_timer_period_value"
+                        toolTipText="Select value of the timer period" description="Value of the timer period"
+                        value="65535">
+                            <p1:GInteger.layoutData>
+                                <GridData widthHint="80" horizontalAlignment="FILL"/>
+                            </p1:GInteger.layoutData>
+                        </p1:GInteger>
+                        <Label/>
+                        <Label/>
+                        <Label/>                        
+                        <p1:GLabel text="Timer compare value:" visible="true"
+                        manifestObj="true" widgetName="glabel_timer_compare_value" />
+                        <p1:GInteger x:Style="NONE" minValue="0" maxValue="65535"
+                        mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE"
+                        format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC"
+                        manifestObj="true" widgetName="ginteger_timer_compare_value"
+                        value="32768" toolTipText="Select value for the timer comparison"
+                        description="Value for timer comparison">
+                            <p1:GInteger.layoutData>
+                                <GridData widthHint="80" horizontalAlignment="FILL"/>
+                            </p1:GInteger.layoutData>
+                        </p1:GInteger>
+                        <Label/>
+                        <Label/>
+                        <Label/>                        
+                        <p1:GLabel text="Output passive level:" widgetName="glabel_output_passive_level" />
+                        <p1:GCombo description="Select the passive level of the output pin"
+                        mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE"
+                        manifestObj="true" options="Low&#13;&#10;High"
+                        toolTipText="Select the passive level of the output pin" value="Low"
+                        widgetName="gcombo_output_passive_level">
+                            <p1:GCombo.layoutData>
+                                <GridData widthHint="100" horizontalAlignment="FILL"/>
+                            </p1:GCombo.layoutData>
+                        </p1:GCombo>
+                        <Label/>
+                        <Label/>
+                        <Label/>                        
+                        <p1:GLabel text="Dither mode:" widgetName="glabel_dither_mode" />
+                        <p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE"
+                        manifestObj="true" widgetName="gcombo_dither_mode"
+                        options="Dither is disabled&#13;&#10;Period is increased by 1 cycle&#13;&#10;Compare match is delayed by 1 cycle&#13;&#10;Period is increased by 1 cycle and compare match is delayed by 1 cycle"
+                        value="Dither is disabled" toolTipText="Select dither mode"
+                        description="This field controls the dither mode for the slice">
+                            <p1:GCombo.layoutData>
+                                <GridData horizontalSpan="4" horizontalAlignment="FILL" widthHint="400"/>
+                            </p1:GCombo.layoutData>
+                        </p1:GCombo>
+                        <p1:GLabel text="Dither compare value:" widgetName="glabel_dither_compare_value" />
+                        <p1:GInteger description="Dither compare register value."
+                        format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC"
+                        mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE"
+                        manifestObj="true" maxValue="15" minValue="0" toolTipText="Dither compare value"
+                        value="0" widgetName="ginteger_dither_compare_value">
+                            <p1:GInteger.layoutData>
+                                <GridData widthHint="80" horizontalAlignment="FILL"/>
+                            </p1:GInteger.layoutData>
+                        </p1:GInteger>
+                        <Label/>
+                        <Label/>
+                        <Label/>
+                    </p1:GGroup>                                  
+                </p1:Tab>
+            </p1:GTab.control>
+        </p1:GTab>
+        <p1:GTab text="Capture Mode Settings" visible="true" enabled="true" manifestObj="true" widgetName="gtab_capture_mode_settings">
+            <p1:GTab.control>
+                <p1:Tab widgetName="composite_1">
+                    <p1:Tab.layout>
+                        <GridLayout/>
+                    </p1:Tab.layout> 
+                    <p1:GGroup text="Capture Mode" manifestObj="true" widgetName="ggroup_18">
+                        <p1:GGroup.layout>
+                            <GridLayout numColumns="2"/>
+                        </p1:GGroup.layout>
+                        <p1:GGroup.layoutData>
+                            <GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL" horizontalSpan="4"/>
+                        </p1:GGroup.layoutData>
+                        <p1:GCheck
+                        description="Capture into CC4yC0V/CC4yC1V and CC4yC3V/CC4yC2V control by same event CC0capt1"
+                        manifestObj="true" text="Enable same capture event"
+                        toolTipText="Capture into CC4yC0V/CC4yC1V and CC4yC3V/CC4yC2V control by same event CC0capt1"
+                        widgetName="gcheck_enable_same_capture_event" >
+                            <p1:GCheck.layoutData>
+                                <GridData horizontalSpan="2"/>
+                            </p1:GCheck.layoutData>
+                        </p1:GCheck>
+                        <p1:GCheck
+                        description="Control the Capture mode. &#13;&#10;Normal Capture Mode:Clear of the Full Flag of each capture register is done by accessing the registers individually only.&#13;&#10;Extended Capture Mode: Clear of the Full Flag of each capture register is done not only by accessing the individual registers but also by accessing the ECRD register. &#13;&#10;"
+                        manifestObj="true" text="Enable extended capture mode"
+                        toolTipText="" widgetName="gcheck_enable_extended_capture_mode" >
+                            <p1:GCheck.layoutData>
+                                <GridData horizontalSpan="2"/>
+                            </p1:GCheck.layoutData>
+                        </p1:GCheck>
+                        <p1:GCheck
+                        description="Control if captures should follow or not full flag rules"
+                        manifestObj="true" text="Ignore full flags rules"
+                        toolTipText="Check to capture registers regardless full flag status."
+                        widgetName="gcheck_ignore_full_flag_rules" />
+                        <Label/>
+                        <p1:GLabel text="Maximum count value:" widgetName="glabel_max_count_value"/>
+                        <p1:GInteger description="Value of the timer period" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" maxValue="65535" minValue="0" toolTipText="Select value of the timer period" value="65535" widgetName="ginteger_max_count_value">
+                            <p1:GInteger.layoutData>
+                                <GridData widthHint="80"/>
+                            </p1:GInteger.layoutData>
+                        </p1:GInteger>
+                        <p1:GLabel manifestObj="true" text="Timer clear control:                        "
+                        widgetName="glabel_Timer_clear_control0" />
+                        <p1:GCombo description="Control when the timer must be cleared"
+                        mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE"
+                        manifestObj="true"
+                        options="Never cleared&#13;&#10;Cleared on capture into reg 2 and 3 (trigger 1)&#13;&#10;Cleared on capture into reg 0 and 1 (trigger 0)&#13;&#10;Always in a capture event"
+                        toolTipText="Select when to clear the timer. " value="Never cleared"
+                        widgetName="gcombo_timer_clear_control"/>
+                    </p1:GGroup>                    
+                </p1:Tab>
+            </p1:GTab.control>
+        </p1:GTab>	
+		<p1:GTab text="Value Update Settings" visible="true" enabled="true" manifestObj="true" widgetName="gtab_value_update_settings">
+			<p1:GTab.control>
+				<p1:Tab widgetName="composite_7">
+					<p1:Tab.layout>
+						<GridLayout numColumns="2"/>
+					</p1:Tab.layout>
+					<p1:GCheck description="Enables a shadow transfer when a timer clearing action is performed" manifestObj="true" text="Enable shadow transfer on clear" toolTipText="Enables a shadow transfer when a timer clearing action is performed" widgetName="gcheck_enable_shadow_transfer_on_clear">
+						<p1:GCheck.layoutData>
+							<GridData horizontalSpan="2"/>
+						</p1:GCheck.layoutData>
+					</p1:GCheck>
+					<p1:GCheck manifestObj="true" text="Enable multi-channel shadow transfer using MCSS input" widgetName="gcheck_enable_mcss_input" description="If enabled allows multi-channel shadow transfer using the MCSS input.">
+						<p1:GCheck.layoutData>
+							<GridData horizontalSpan="2"/>
+						</p1:GCheck.layoutData>
+					</p1:GCheck>
+					<p1:GLabel manifestObj="true" text="Shadow transfer mode:" widgetName="glabel_shadow_transfer_mode"/>
+					<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="In Period Match and One Match&#13;&#10;Only in Period Match&#13;&#10;Only in One Match" value="In Period Match and One Match" widgetName="gcombo_shadow_transfer_mode" description="Select the type of shadow transfer requested via the CCU4x.MCSS input.">
+						<p1:GCombo.layoutData>
+							<GridData grabExcessHorizontalSpace="true" widthHint="236"/>
+						</p1:GCombo.layoutData>
+					</p1:GCombo>
+					<p1:GCheck manifestObj="true" text="Enable cascade shadow transfer" widgetName="gcheck_enable_cascade_shadow_transfer" description="If enabled the shadow transfer is cascaded with the adjacent timer slices.">
+                        <p1:GCheck.layoutData>
+                            <GridData horizontalSpan="2"/>
+                        </p1:GCheck.layoutData>
+                    </p1:GCheck>
+					<p1:GGroup text="Register Value Update Mode" manifestObj="true" widgetName="ggroup_register_value_update_mode">
+						<p1:GGroup.layout>
+							<GridLayout/>
+						</p1:GGroup.layout>
+						<p1:GGroup.layoutData>
+							<GridData horizontalSpan="2" grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+						</p1:GGroup.layoutData>
+						<p1:GCheck description="Updates immediately the period value after a shadow transfer is requested." manifestObj="true" text="Enable immediate update of the period value after a shadow transfer request" toolTipText="Update of the period value happens immediately after a shadow transfer is request  otherwise coherently with PWM cycle" widgetName="gcheck_enable_period_immediate_update"/>
+						<p1:GCheck manifestObj="true" text="Enable immediate update of the compare value after a shadow transfer request" widgetName="gcheck_enable_compare_immediate_update" description="Updates immediately the compare value after a shadow transfer is requested."/>
+						<p1:GCheck manifestObj="true" text="Enable immediate update of the passive level value after a shadow transfer request" widgetName="gcheck_enable_psl_immediate_update" description="Updates immediately the passivel level after a shadow transfer is requested."/>
+						<p1:GCheck manifestObj="true" text="Enable immediate update of the dither value after a shadow transfer request" widgetName="gcheck_enable_dither_immediate_update" description="Updates immediately the dither value after a shadow transfer is requested."/>
+						<p1:GCheck manifestObj="true" text="Enable immediate update of the prescaler value after a shadow transfer request" widgetName="gcheck_enable_prescaler_immediate_update" description="Updates immediately the floating prescaler value after a shadow transfer is requested."/>
+					</p1:GGroup>
+					<p1:GGroup text="Shadow Transfer Request" manifestObj="true" widgetName="ggroup_shadow_transfer_request">
+						<p1:GGroup.layout>
+							<GridLayout/>
+						</p1:GGroup.layout>
+						<p1:GGroup.layoutData>
+							<GridData horizontalAlignment="FILL" grabExcessHorizontalSpace="true" horizontalSpan="2"/>
+						</p1:GGroup.layoutData>
+						<p1:GCheck manifestObj="true" text="Enable automatic shadow transfer request on period shadow register write" widgetName="gcheck_automatic_shadow_transfer_request_on_period_write" description="Writing into the period shadow register will automatically request the shadow transfer."/>
+						<p1:GCheck manifestObj="true" text="Enable automatic shadow transfer request on compare shadow register write" widgetName="gcheck_automatic_shadow_transfer_request_on_compare_write" description="Writing into the compare shadow register will automatically request the shadow transfer."/>
+						<p1:GCheck manifestObj="true" text="Enable automatic shadow transfer request on passive level shadow register write" widgetName="gcheck_automatic_shadow_transfer_request_on_psl_write" description="Writing into the passivel level register will automatically request the shadow transfer."/>
+						<p1:GCheck manifestObj="true" text="Enable automatic shadow transfer request on dither shadow register write" widgetName="gcheck_automatic_shadow_transfer_request_on_dither_write" description="Writing into the dither shadow register will automatically request the shadow transfer."/>
+						<p1:GCheck manifestObj="true" text="Enable automatic shadow transfer request on prescaler shadow register write" widgetName="gcheck_automatic_shadow_transfer_request_on_prescaler_write" description="Writing into the floating prescaler shadow register will automatically request the shadow transfer."/>
+					</p1:GGroup>					
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+		<p1:GTab text="Function Settings" visible="true" enabled="true" widgetName="gtab_function_settings">
+			<p1:GTab.control>
+				<p1:Tab widgetName="composite_20">
+					<p1:Tab.layout>
+						<GridLayout/>
+					</p1:Tab.layout>
+					<p1:GIndexGroup text="Input Event Configuration" widgetName="gindexgroup_input_event_configuration" manifestObj="true">
+						<p1:GIndexGroup.layout>
+							<GridLayout numColumns="2"/>
+						</p1:GIndexGroup.layout>
+						<p1:GIndexGroup.layoutData>
+							<GridData horizontalAlignment="FILL" verticalAlignment="TOP" grabExcessHorizontalSpace="true"/>
+						</p1:GIndexGroup.layoutData>
+						<p1:GLabel text="Event selection:" visible="true" widgetName="glabel_event_selection"/>
+						<p1:GIndexCombo maxChoices="3" widgetName="gindexcombo_event_selection" value="Event 0" options="Event 0&#13;&#10;Event 1&#13;&#10;Event 2&#13;&#10;" description="Selects event being configured" toolTipText="Selects event being configured">
+							<p1:GIndexCombo.layoutData>
+								<GridData grabExcessHorizontalSpace="true" widthHint="179"/>
+							</p1:GIndexCombo.layoutData>
+						</p1:GIndexCombo>
+						<p1:GLabel text="  Edge selection:" visible="true" widgetName="glabel_event0_edge_selection"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_event_edge_selection" options="No action&#13;&#10;Signal active on rising edge&#13;&#10;Signal active on falling edge&#13;&#10;Signal active on both edges" value="No action" description="Select the criteria that will trigger the event.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="179"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="  Level selection:" visible="true" widgetName="glabel_event0_level_selection"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_event_level_selection" options="Active on high level&#13;&#10;Active on low level" value="Active on high level" description="Select the criteria that will trigger the event.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="179"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="  Low pass filter configuration:   " visible="true" widgetName="glabel_event0_lpf_configuration"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_event_lpf_configuration" options="LPF is disabled&#13;&#10;3 clock cycles of fCCU4&#13;&#10;5 clock cycles of fCCU4&#13;&#10;7 clock cycles of fCCU4" value="LPF is disabled" description="Configures the low pass filter for the Event. This means that the signal must be stable for this number of cycles for a proper transition be considered valid.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="179"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+					</p1:GIndexGroup>
+					<p1:GGroup text="Function Configuration" manifestObj="true" widgetName="ggroup_function_configuration">
+						<p1:GGroup.layout>
+							<GridLayout numColumns="2"/>
+						</p1:GGroup.layout>
+						<p1:GGroup.layoutData>
+							<GridData horizontalAlignment="FILL"/>
+						</p1:GGroup.layoutData>
+						<p1:GLabel text="Start function:" visible="true" widgetName="glabel_start_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_start_function" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" description="Associate one of the configured events to an external start function. This means that other peripherals or port pins can be used to start the timer. This can only be associated to an event that is configured as edge active.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Start function mode:" visible="true" manifestObj="true" widgetName="glabel_start_function_mode"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_start_function_mode" options="Start timer&#13;&#10;Clear and Start timer" value="Start timer" description="Choose the action that will be performed by the external start function. Start/Restart can only be used to start a timer that is currently stopped. &#13;&#10;Clear and Start will clear the timer to 0 and the will start the timer.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Stop function:" visible="true" widgetName="glabel_stop_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_stop_function" description="Associate one of the configured events to an external stop function. This means that other peripherals or port pins can be used to stop the timer. This can only be associated to an event that is configured as edge active.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Stop function mode:" visible="true" manifestObj="true" widgetName="glabel_stop_function_mode"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_stop_function_mode" options="Stop timer&#13;&#10;Clear timer&#13;&#10;Clear and Stop timer" value="Stop timer" description="Choose the action that will be performed upon the detection of the event.&#13;&#10;Stop will stop a timer that is running, Clear and Stop will clear the timer and then stop it and Clear Only will clear the timer to 0, without stopping it.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Count function:" visible="true" manifestObj="true" widgetName="glabel_count_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_count_function" description="Associate one of the configured events to a signal that can be used as count clock. This means that every time that this signal is detected the counter will increment/decrement depending on the counting direction.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Count direction control function:" visible="true" manifestObj="true" widgetName="glabel_direction_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_direction_function" description="Associate one of the configured events to an external counting direction function. This can only be associated to an event that is configured as level active.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Capture 0 function:" visible="true" manifestObj="true" widgetName="glabel_capture0_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_capture0_function" description="Enables the possibility to one external signal be used as capture trigger. Only available when the timer slice is in Capture mode. This will disable the control of the compare value of the timer. Each time that the Capture Trigger 0 is sensed the timer value is captured into the capture register 1. The value that was previously on capture register 1 is shifted to the capture register 0.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Capture 1 function:" visible="true" manifestObj="true" widgetName="glabel_capture1_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_capture1_function" description="Enables the possibility to one external signal be used as capture trigger. Only available when the timer slice is in Capture mode. This will disable the control of the period value of the timer. Each time that the Capture Trigger 1 is sensed the timer value is captured into the capture register 3. The value that was previously on capture register 3 is shifted to the capture register 2.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Gate function:" visible="true" manifestObj="true" widgetName="glabel_gate_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_gate_function" description="Associate one of the configured events to the level signal used to gate the timer clock. During the time where the gate is active the timer/counter is not running (run bit is not cleared, meaning that when the signal is inactive the timer/counter will resume operation).">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Load function:" visible="true" manifestObj="true" widgetName="glabel_load_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_load_function" description="Associate one of the configured events to the edge signal that loads the timer with the value present at the compare register.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Trap function:" visible="true" manifestObj="true" widgetName="glabel_trap_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_trap_function" description="Select this to associate the Event 2 to the TRAP function. Whenever the TRAP is detected the PWM Output is set into passive state. This can be used for a fail safe condition, such as current dripping.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Exit TRAP state mode:" visible="true" manifestObj="true" widgetName="glabel_70"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_exit_trap_state_mode" options="Automatic&#13;&#10;Automatic synchronous with PWM&#13;&#10;Software&#13;&#10;Software synchronous with PWM &#13;&#10;" value="Automatic" description="Choose how the TRAP function condition will exit: Automatic (Hardware) or Software. If automatic/software is selected whenever the trap signal becomes inactive the PWM output resumes normal operation. If software is selected even when the trap signal becomes inactive the software must clear the TRAP state by writing in to the CC4ySWR.RE2A register.">
+							<p1:GCombo.layoutData>
+								<GridData grabExcessHorizontalSpace="true" widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GCheck text="Enable trap during initialization" manifestObj="true" widgetName="gcheck_enable_trap_during_initialization" description="If enabled the trap control will be started at the end of the CCU4 slice initialization.">
+							<p1:GCheck.layoutData>
+								<GridData horizontalSpan="2"/>
+							</p1:GCheck.layoutData>
+						</p1:GCheck>
+						<p1:GLabel text="Modulation function:" visible="true" manifestObj="true" widgetName="glabel_modulation_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_modulation_function" description="Associate one of the configured events to an external modulation function, used to modulate/clear the output. This can only be associated to an event that is configured as level active.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Modulation function mode:" visible="true" manifestObj="true" widgetName="glabel_modulation_function_mode"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_modulation_function_mode" options="Clear ST and OUT signals&#13;&#10;Clear only the OUT signal" value="Clear ST and OUT signals" description="Choose the action that will be performed upon the detection of the event.">
+							<p1:GCombo.layoutData>
+								<GridData grabExcessHorizontalSpace="true" widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GCheck text="Enable modulation synchronous with PWM" manifestObj="true" widgetName="gcheck_enable_modulation_sync_with_pwm" description="Select this to synchronize the clear of the ST output with the PWM signal, avoiding possible glitches at the output.">
+							<p1:GCheck.layoutData>
+								<GridData horizontalSpan="2"/>
+							</p1:GCheck.layoutData>
+						</p1:GCheck>
+						<p1:GLabel text="Override trigger function:" visible="true" manifestObj="true" widgetName="glabel_override_trigger_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_override_trigger_function" description="Select this to allow the override of the status signal (CC4yST) with a value passed through an external signal. This will consume two events: one configured as edge that will act as trigger to override the status bit and the other configured as level that contains the value to be copied in the status bit.">
+							<p1:GCombo.layoutData>
+								<GridData widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel manifestObj="true" text="Override value function:" widgetName="glabel_override_value_function"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Disabled&#13;&#10;Triggered by Event 0&#13;&#10;Triggered by Event 1&#13;&#10;Triggered by Event 2" value="Disabled" widgetName="gcombo_override_value_function" description="Select this to allow the override of the status signal (CC4yST) with a value passed through an external signal. This will consume two events: one configured as edge that will act as trigger to override the status bit and the other configured as level that contains the value to be copied in the status bit.">
+							<p1:GCombo.layoutData>
+								<GridData grabExcessHorizontalSpace="true" widthHint="217"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+					</p1:GGroup>
+					<p1:GMessage text="New Message" visible="true" manifestObj="true" isError="true" widgetName="gmessage_function_settings">
+						<p1:GMessage.layoutData>
+							<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+						</p1:GMessage.layoutData>
+					</p1:GMessage>
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+		<p1:GTab text="Event Settings" visible="true"
+			enabled="true" manifestObj="true" widgetName="gtab_Timer_Event_Settings">
+			<p1:GTab.control>
+				<p1:Tab widgetName="composite_6">
+					<p1:Tab.layout>
+						<GridLayout />
+					</p1:Tab.layout>
+					<p1:GGroup text="Timer Events" manifestObj="true"
+						widgetName="ggroup_timer_events">
+						<p1:GGroup.layout>
+							<GridLayout/>
+						</p1:GGroup.layout>
+						<p1:GGroup.layoutData>
+							<GridData
+								horizontalAlignment="FILL" grabExcessHorizontalSpace="true" verticalAlignment="CENTER" />
+						</p1:GGroup.layoutData>
+						<p1:GCheck text="Period match while counting up" manifestObj="true"
+							widgetName="gcheck_enable_period_match_event"
+							description="Enable the generation of an interrupt pulse every time a period match while counting up occurs"
+							toolTipText="Generates an event at every period match."/>
+						<p1:GCheck text="One match while counting down"
+							manifestObj="true" widgetName="gcheck_enable_one_match_event"
+							description="Enable the generation of an interrupt pulse every time an one match while counting down occurs"
+							toolTipText="Generates an event when timer is decremented to one."/>
+						<p1:GCheck text="Compare match while counting up"
+							manifestObj="true" widgetName="gcheck_enable_compare_up_event"
+							description="Enable the generation of an interrupt pulse every time a compare match while counting up occurs"
+							toolTipText="Generates an event at every compare match when timer is incrementing."/>
+						<p1:GCheck text="Compare match while counting down"
+							manifestObj="true" widgetName="gcheck_enable_compare_down_event"
+							description="Enable the generation of an interrupt pulse every time a compare match while counting down occurs"
+							toolTipText="Generates an event at every compare match when timer is decrementing."/>
+					</p1:GGroup>
+					<p1:GGroup text="Input Events" manifestObj="true" widgetName="ggroup_input_events">
+						<p1:GGroup.layoutData>
+							<GridData horizontalAlignment="FILL"/>
+						</p1:GGroup.layoutData>
+						<p1:GGroup.layout>
+							<GridLayout/>
+						</p1:GGroup.layout>
+						<p1:GCheck text="Event 0" manifestObj="true" widgetName="gcheck_enable_external_event0"
+							description="Enable the generation of an interrupt pulse every time that Event 0 is detected."
+							toolTipText="Generates an event at every event 0 detection."/>
+						<p1:GCheck text="Event 1" manifestObj="true" widgetName="gcheck_enable_external_event1"
+							description="Enable the generation of an interrupt pulse every time that Event 1 is detected."
+							toolTipText="Generates an event at every event 1 detection."/>
+						<p1:GCheck text="Event 2" manifestObj="true" widgetName="gcheck_enable_external_event2"
+							description="Enable the generation of an interrupt pulse every time that Event 2 is detected."
+							toolTipText="Generates an event at every event 2 detection."/>
+					</p1:GGroup>
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+	</p1:TabFolder>
+</p1:Tab>

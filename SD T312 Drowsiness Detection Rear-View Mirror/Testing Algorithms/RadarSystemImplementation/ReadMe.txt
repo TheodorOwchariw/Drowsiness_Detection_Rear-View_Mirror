@@ -1,0 +1,2 @@
+-- Infineon's Position2Go MATLAB Implementation used for creating the radar object: 'oRS'
+-- Necessary for interfacing with the board in MATLAB
